@@ -8,7 +8,8 @@ function checkPalindrome() {
         //const reg = /[^\w]/g;
         const reg = /[^a-zA-Z0-9]/g;
         const cleanContent = inputContent.toLowerCase().replaceAll(reg, "")
-        if (cleanContent === cleanContent.split("").reverse().join("")) {
+        const contentReversed = cleanContent.split("").reverse().join("")
+        if (cleanContent === contentReversed) {
             result.textContent = `${inputContent} is a palindrome.`
         } else {
             result.textContent = `${inputContent} is not a palindrome.`
